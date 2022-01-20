@@ -1,0 +1,106 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; }
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%; }
+
+body {
+  font-family: "Titillium", sans-serif;
+  color: black; }
+
+.container {
+  width: 100vw;
+  display: grid;
+  grid-template-columns: 0.5fr [leftBanner-start] 2fr [leftBanner-end content-start] minmax(6rem, 1fr) [center-start] 5fr [center-end] minmax(6rem, 1fr) [content-end rightBanner-start] 3fr [rightBanner-end] 0.5fr;
+  grid-template-rows: auto auto auto 75vh; }
+
+.content {
+  grid-column: content-start / content-end;
+  background-color: cornflowerblue; }
+
+.header {
+  grid-column: leftBanner-start / rightBanner-end; }
+
+.logo {
+  height: 90%;
+  width: 17%; }
+
+.leftBanner {
+  grid-column: leftBanner-start / leftBanner-end;
+  background-color: burlywood; }
+
+.navBar {
+  grid-column: leftBanner-start / rightBanner-end;
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+
+.nav-list {
+  list-style: none;
+  display: flex;
+  justify-content: center; }
+  .nav-list-link {
+    font-size: 2rem;
+    margin-left: 2rem;
+    padding-bottom: .7rem;
+    text-decoration: none;
+    font-family: "Titillium", sans-serif;
+    color: #101d2c; }
+    .nav-list-link:hover {
+      color: #da0000;
+      border-bottom: solid 5px #da0000; }
+
+.search {
+  margin-left: auto;
+  padding: 1rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 30%; }
+
+.search-input {
+  padding: 1rem 2rem;
+  width: 90%;
+  border: solid 1px #535353;
+  border-radius: 30px;
+  margin-right: -3.25rem;
+  transition: all .25s; }
+
+.search-input:focus {
+  outline: none;
+  width: 100%; }
+
+.search-button {
+  outline: none;
+  background-color: #fff;
+  border: none; }
+
+.search-icon {
+  width: 2rem;
+  height: 2rem; }
+
+.rightBanner {
+  grid-column: rightBanner-start / rightBanner-end;
+  background-color: darkgray; }
+
+.subNav {
+  grid-column: leftBanner-start / rightBanner-end;
+  background-color: #da0000; }
+
+.subNav-list {
+  list-style: none;
+  display: flex;
+  justify-content: center; }
+
+.subNav-list-item {
+  padding: 1rem 2rem; }
+
+.subNav-list-item > * {
+  font-size: 1.5rem;
+  text-decoration: none;
+  color: white; }
